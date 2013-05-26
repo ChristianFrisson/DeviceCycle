@@ -1,0 +1,77 @@
+#N canvas 539 144 231 281 10;
+#X floatatom 12 183 5 0 0 3 x - -;
+#X floatatom 48 183 5 0 0 3 y - -;
+#X floatatom 118 183 5 0 0 3 rx - -;
+#X floatatom 153 184 5 0 0 3 ry - -;
+#X floatatom 187 184 5 0 0 3 rz - -;
+#X obj 12 158 route x y z rx ry rz;
+#X floatatom 83 183 5 0 0 3 z - -;
+#X obj 22 114 route button_1 button_2;
+#X obj 22 136 bng 15 250 50 0 empty empty button_1 17 7 0 10 -262144
+-1 -1;
+#X obj 89 136 bng 15 250 50 0 empty empty button_2 17 7 0 10 -262144
+-1 -1;
+#X obj 6 222 outlet;
+#X obj 5 2 cnv 15 220 20 empty empty dc.3dm.spacenav 2 11 1 18 -204786
+-33289 0;
+#X obj 6 27 inlet;
+#X obj 6 48 tgl 15 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1;
+#N canvas 559 154 173 180 hidio 0;
+#X obj -17 3 inlet;
+#X obj -16 156 outlet;
+#X obj -16 112 hidio;
+#N canvas 0 22 454 304 remove 0;
+#X obj 134 12 inlet;
+#X obj 109 60 unpack symbol symbol float float;
+#X obj 110 107 pack symbol symbol float;
+#X obj 110 135 list trim;
+#X obj 116 196 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 3 2 2;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X restore -16 134 pd remove instance numbers;
+#X obj -9 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj -9 70 t b;
+#X obj -16 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 18 69 refresh;
+#X msg -15 48 open 0x046d 0xc626;
+#X connect 0 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 8 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X restore 6 68 pd hidio;
+#X obj 67 68 cnv 15 100 20 empty empty DeviceCycle 2 11 1 18 -262144
+-1985 0;
+#X obj 12 90 route relative button;
+#X obj 106 222 cnv 20 25 20 empty empty art 0 10 0 14 -262144 -258113
+0;
+#X obj 59 222 cnv 20 45 20 empty empty numedi 0 10 0 14 -262144 -1
+0;
+#X obj 130 222 cnv 20 30 20 empty empty .org 0 10 0 14 -262144 -1 0
+;
+#X text 1 243 (c) 2010 Christian Frisson (GNU GPL);
+#X text 31 258 last update: 14/06/2010;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 5 2 6 0;
+#X connect 5 3 2 0;
+#X connect 5 4 3 0;
+#X connect 5 5 4 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 14 0 10 0;
+#X connect 16 0 5 0;
+#X connect 16 1 7 0;

@@ -1,5 +1,15 @@
+.DS_Store
 CMakeCache.txt
 CMakeFiles
 Makefile
 cmake_install.cmake
 install_manifest.txt
+*.pd_darwin
+*.pd_linux
+*.dll
+*.dll.a
+*.dylib
+*.a
+*.so
+*.gch
+*.opp

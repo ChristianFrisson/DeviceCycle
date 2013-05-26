@@ -1,0 +1,57 @@
+#N canvas 186 168 379 523 10;
+#X declare -lib devicecycle;
+#X obj -124 -6 cnv 15 370 20 empty empty devicecycle-help 2 11 1 18
+-204786 -33289 0;
+#X obj -101 177 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj -101 197 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj -100 118 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj 50 381 cnv 20 25 20 empty empty art 0 10 0 14 -262144 -258113
+0;
+#X obj 3 381 cnv 20 45 20 empty empty numedi 0 10 0 14 -262144 -1 0
+;
+#X obj 74 381 cnv 20 30 20 empty empty .org 0 10 0 14 -262144 -1 0
+;
+#X text -82 404 (C) Copyright 2010 Christian Frisson (GNU GPL);
+#X text -124 77 DEVICES;
+#X text -122 263 FILTERING;
+#X obj -101 237 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj -100 137 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj -56 424 hidio;
+#X text -20 423 by Hans-Christoph Steiner et al.;
+#X obj -56 445 np_nifalcon;
+#X text 17 444 by Kyle Machulis et al.;
+#X obj -82 176 dc.jog.shuttlepro2;
+#X obj -82 196 dc.jog.shuttlexpress;
+#X obj -81 117 dc.3dm.spacenav;
+#X obj -81 136 dc.3dmff.falcon;
+#X obj -82 236 dc.mt.macbook;
+#X text -115 96 3D mice:;
+#X text -117 157 Jog wheels:;
+#X text -114 218 Multitouch:;
+#X text 14 117 (3Dconnexion Space Navigator);
+#X text 14 135 (Novint Falcon);
+#X text 34 175 (Contour Design Shuttle Pro2);
+#X text 44 195 (Contour Design Shuttle Xpress);
+#X text 4 235 (Apple Macbook Unibody Trackpad);
+#X obj -56 466 fingerpinger;
+#X text 22 465 adapted from M. Egger et al.;
+#X obj -99 328 hsp/viscous-friction-estimate;
+#X obj 132 -5 import devicecycle;
+#X text -113 309 Using Edgar Berdahl's HSP toolbox:;
+#X text -107 27 DeviceCycle is a toolbox for pd-extended aiming at
+easing the rapid prototyping of gestural interfaces by re-using off-the-shelf
+devices and existing pd objects/abtractions.;
+#X text -119 360 DeviceCycle requires Pd extended from version 0.41.4
+onwards;
+#X obj -99 287 dc.mt.2finger.geo;
+#X text -19 491 last update: 18/06/2010;
+#X connect 1 0 16 0;
+#X connect 2 0 17 0;
+#X connect 3 0 18 0;
+#X connect 10 0 20 0;
+#X connect 11 0 19 0;

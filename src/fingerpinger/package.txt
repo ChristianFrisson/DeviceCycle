@@ -1,0 +1,4 @@
+NAME=fingerpinger
+SRCS=fingerpinger.cpp
+CFLAGS += -F/System/Library/PrivateFrameworks
+LDFLAGS += -F/System/Library/PrivateFrameworks -framework MultitouchSupport
